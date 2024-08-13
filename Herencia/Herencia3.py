@@ -4,7 +4,7 @@ class Empleado:
         self.salario = salario
 
     def mostrar_informacion(self):
-        return f"Empleado: {self.nombre}, Salario: {self.salario}"
+        return (f"Empleado: {self.nombre}, Salario: {self.salario}")
     
 class Gerente(Empleado):
     def __init__(self, nombre, salario,empleados_a_cargo):
@@ -13,7 +13,7 @@ class Gerente(Empleado):
 
     def mostrar_informacion(self):
         info = super().mostrar_informacion()
-        return f"{info}, Empleados a cargo: {self.empleados_a_cargo}"
+        return (f"{info}, Empleados a cargo: {self.empleados_a_cargo}")
     
 gerente = Gerente("José",150000,18)
 print(gerente.mostrar_informacion())
